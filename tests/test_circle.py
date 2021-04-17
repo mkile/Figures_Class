@@ -1,22 +1,22 @@
 import pytest
-from source.classes import Triangle
+from source.classes import Circle
 
 
 def test_creation():
-    assert Triangle('triangle', [2, 4, 5])
+    assert Circle('circle', [5])
 
 
-def test_check_name(generic_triangle):
-    assert generic_triangle.name == 'test_figure_name'
+def test_check_name(generic_circle):
+    assert generic_circle.name == 'test_figure_name'
 
 
-def test_check_area(generic_triangle):
-    assert int(round(generic_triangle.area(), 0)) == 4
+def test_check_area(generic_circle):
+    assert int(round(generic_circle.area(), 0)) == 28
 
 
-def test_check_perimeter(generic_triangle):
-    assert generic_triangle.perimeter() == 11
+def test_check_perimeter(generic_circle):
+    assert int(round(generic_circle.perimeter(), 0)) == 19
 
 
-def test_add_area(generic_triangle):
-    assert int(round(generic_triangle.add_area(generic_triangle), 0)) == 8
+def test_add_area(generic_circle):
+    assert int(round(generic_circle.add_area(generic_circle), 0)) == 57
